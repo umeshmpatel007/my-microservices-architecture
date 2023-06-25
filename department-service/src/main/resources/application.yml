@@ -1,0 +1,25 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: department-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    root: info
