@@ -4,13 +4,8 @@ server:
 spring:
   application:
     name: department-service
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone:  http://localhost:8761/eureka/
-  instance:
-    instance-id: ${spring.application.name}:${random.value}
+  config:
+    import: configserver:http://localhost:9001/
 
 management:
   security:
