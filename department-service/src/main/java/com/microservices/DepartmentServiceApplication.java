@@ -11,7 +11,6 @@ public class DepartmentServiceApplication {
 
 
 	public static void main(String[] args) {
-		System.out.println("------------"+Runtime.getRuntime().availableProcessors());
 		SpringApplication.run(DepartmentServiceApplication.class, args);
 	}
 

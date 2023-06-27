@@ -6,6 +6,8 @@ spring:
     name: department-service
   config:
     import: configserver:http://localhost:9001/
+  zipkin:
+    base-url: http://127.0.0.1:9411/
 
 management:
   security:
@@ -17,4 +19,5 @@ management:
 
 logging:
   level:
-    root: info
+    org.springframework.cloud.sleuth: DEBUG
+    zipkin2: DEBUG
