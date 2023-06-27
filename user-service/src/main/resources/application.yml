@@ -6,4 +6,5 @@ spring:
     name: user-service
   config:
     import: configserver:http://localhost:9001/
-
+  zipkin:
+    base-url: http://127.0.0.1:9411/
